@@ -1,0 +1,8 @@
+[
+  { "crop": "Rice", "soil": "Clay", "rainfall": "High", "temp": "Warm", "region": "East", "description": "Rice thrives in flooded fields; high rainfall required.", "sampleRain": 2000 },
+  { "crop": "Wheat", "soil": "Loamy", "rainfall": "Moderate", "temp": "Cool", "region": "North", "description": "Wheat prefers cooler temperatures and moderate rainfall.", "sampleRain": 800 },
+  { "crop": "Cotton", "soil": "Black", "rainfall": "Low", "temp": "Hot", "region": "South", "description": "Cotton grows well in hot, dry climates.", "sampleRain": 600 },
+  { "crop": "Maize", "soil": "Sandy", "rainfall": "Moderate", "temp": "Warm", "region": "Central", "description": "Maize prefers warm climates and well-drained soils.", "sampleRain": 1000 },
+  { "crop": "Sugarcane", "soil": "Alluvial", "rainfall": "High", "temp": "Hot", "region": "West", "description": "Sugarcane needs abundant water and warm climate.", "sampleRain": 1500 },
+  { "crop": "Soybean", "soil": "Loamy", "rainfall": "Moderate", "temp": "Warm", "region": "Central", "description": "Soybean grows in warm seasons with moderate rainfall.", "sampleRain": 900 }
+]

@@ -1,0 +1,82 @@
+<a class="navbar-brand fw-bold d-flex align-items-center" href="#!/home">
+    <i class="bi bi-seedling fs-3 me-2"></i> AgroWise
+</a>
+
+<!-- Hero section -->
+<section class="hero text-center text-white">
+  <div class="container">
+    <h1>AgroWise</h1>
+    <p class="lead">Smart Crop Advisory System for Optimal Farming Decisions</p>
+    <a href="#!/dashboard" class="btn btn-outline-light btn-lg mt-3">View Dashboard</a>
+  </div>
+</section>
+
+
+<!-- Advisory Form & Suggestions -->
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- Advisory Form -->
+      <div class="col-lg-5">
+        <div class="card p-4 shadow-sm">
+          <h3 class="text-success mb-3">Get Crop Suggestions</h3>
+          <form ng-submit="getAdvisory()">
+            <div class="mb-3">
+              <label class="form-label">Soil Type</label>
+              <select class="form-select" ng-model="user.soil" required>
+                <option value="">Select soil</option>
+                <option>Clay</option><option>Loamy</option><option>Black</option><option>Sandy</option><option>Alluvial</option>
+              </select>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label class="form-label">Rainfall</label>
+                <select class="form-select" ng-model="user.rainfall" required>
+                  <option value="">Select</option><option>Low</option><option>Moderate</option><option>High</option>
+                </select>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label class="form-label">Temperature</label>
+                <select class="form-select" ng-model="user.temp" required>
+                  <option value="">Select</option><option>Cool</option><option>Warm</option><option>Hot</option>
+                </select>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Region</label>
+              <select class="form-select" ng-model="user.region" required>
+                <option value="">Select region</option>
+                <option>North</option><option>South</option><option>East</option><option>West</option><option>Central</option>
+              </select>
+            </div>
+            <div class="d-flex gap-2">
+              <button type="submit" class="btn btn-success">Get Advisory</button>
+              <button type="button" class="btn btn-outline-secondary" ng-click="user={}; suggestions=[]">Reset</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Suggestions Cards -->
+      <div class="col-lg-7">
+        <div class="row g-3">
+          <div ng-if="noResults" class="alert alert-warning">No exact matches. Showing best matches.</div>
+          <div class="col-md-6" ng-repeat="c in suggestions">
+            <div class="card shadow-sm h-100">
+              <div class="card-body">
+                <h5 class="card-title text-success">{{c.crop}}</h5>
+                <p class="card-text small text-muted">{{c.soil}} • {{c.region}} • {{c.rainfall}} rainfall</p>
+                <p class="card-text">{{c.description}}</p>
+              </div>
+            </div>
+          </div>
+          <div ng-if="suggestions.length === 0 && !noResults" class="text-center text-muted py-4">
+            No suggestions yet — please fill the form.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

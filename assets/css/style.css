@@ -1,0 +1,220 @@
+/* =======================
+   Global Styles
+======================= */
+body {
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    background: #f5f8f7;
+    color: #2b2b2b;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
+/* =======================
+   Navbar
+======================= */
+.navbar {
+    background: #2a9d2a !important;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: background 0.5s;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff !important;
+    animation: fadeInDown 1s ease forwards;
+}
+
+.navbar-nav .nav-link {
+    color: #fff !important;
+    margin-right: 0.8rem;
+    font-weight: 500;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #d4f1d4 !important;
+    transform: scale(1.1);
+}
+
+/* =======================
+   Hero Section
+======================= */
+.hero {
+    background: linear-gradient(rgba(42,157,42,0.85), rgba(42,157,42,0.85)), url('../img/hero.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 100px 0;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: fadeInUp 1s forwards 0.3s;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp 1s forwards 0.6s;
+}
+
+.hero .btn {
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeInUp 1s forwards 0.9s;
+}
+
+/* =======================
+   Cards
+======================= */
+.card {
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s forwards;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* =======================
+   Buttons
+======================= */
+.btn-success {
+    background: linear-gradient(90deg,#2a9d2a,#1f7f1f);
+    border: none;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: 0.3s, transform 0.3s;
+}
+
+.btn-success:hover {
+    background: linear-gradient(90deg,#1f7f1f,#2a9d2a);
+    transform: scale(1.05);
+}
+
+.btn-outline-success {
+    color: #2a9d2a;
+    border: 2px solid #2a9d2a;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: 0.3s, transform 0.3s;
+}
+
+.btn-outline-success:hover {
+    background: #2a9d2a;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* =======================
+   Forms
+======================= */
+.form-control, .form-select {
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    transition: 0.3s, box-shadow 0.3s;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #2a9d2a;
+    box-shadow: 0 0 6px rgba(42,157,42,0.25);
+}
+
+/* =======================
+   Alerts
+======================= */
+.alert {
+    border-radius: 10px;
+    animation: fadeIn 0.8s forwards;
+}
+
+/* =======================
+   Dashboard / Charts
+======================= */
+#cropChart {
+    max-width: 100%;
+    height: 300px;
+    animation: fadeInUp 1s forwards;
+}
+
+.card p {
+    font-size: 0.95rem;
+}
+
+/* =======================
+   Footer
+======================= */
+footer {
+    background: #1f7f1f;
+    color: #fff;
+    padding: 20px 0;
+    font-size: 0.9rem;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s forwards 1s;
+}
+
+/* =======================
+   Tables
+======================= */
+.table {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    animation: fadeInUp 1s forwards;
+}
+
+.table thead {
+    background: #2a9d2a;
+    color: #fff;
+}
+
+.table tbody tr:hover {
+    background: #e6f3e6;
+}
+
+/* =======================
+   Animations
+======================= */
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px);}
+    100% { opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-20px);}
+    100% { opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* =======================
+   Responsive
+======================= */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.2rem; }
+    .hero p { font-size: 1rem; }
+}
